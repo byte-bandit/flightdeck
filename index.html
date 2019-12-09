@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Flight Deck</title>
+    <meta name="description" content="The Kryptonbyte Flight Deck">
+    <meta name="author" content="Christian Lohr">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><i class="material-icons">local_airport</i>Flight Deck</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="menu">
+            <h1>Select a class</h1>
+            <div class="collection">
+                <div class="collection-item">10 - Luftrecht</div>
+                <div class="collection-item">20 - Allgemeine Luftfahrzeugkenntnis</div>
+                <div class="collection-item">30 - Flugleistungen und Flugplanung</div>
+                <div class="collection-item">40 - Menschliches Leistungsvermögen</div>
+                <div class="collection-item">50 - Meteorologie</div>
+                <div class="collection-item">60 - Navigation</div>
+                <div class="collection-item">70 - Betriebsverfahren</div>
+                <a href="#!" data-lesson="80" class="lesson-button collection-item">80 - Grundlagen des Fluges</a>
+                <div class="collection-item">90 - Kommunikation VFR</div>
+            </div>
+        </div>
+        <div id="loader" hidden>
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><span class="flow-text">Centered</span></div>
+        </div>
+        <div id="quiz" hidden>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div id="card" class="card scale-transition">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img alt="card" class="activator" src="card.jpeg">
+                        </div>
+                        <div class="card-content">
+                            <span id="title" class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span id="titleHidden" class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <div class="divider"></div>
+                            <div id="solution">Here is some more information about this product that is only revealed once clicked on.</div>
+                            <div class="divider"></div>
+                            <a id="btnNext" class="waves-effect waves-light right-align btn-large"><i class="material-icons right">check</i>Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="markdown.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
