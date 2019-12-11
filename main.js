@@ -1,7 +1,7 @@
 gItems = [];
 gCurrentItem = null;
 
-$('.lesson-button').click(async function(e) {
+$('.lesson-button').click(async function (e) {
     e.preventDefault();
     lesson = e.target.dataset.lesson;
     $('#menu').hide();
@@ -17,7 +17,7 @@ $('.lesson-button').click(async function(e) {
     return false;
 });
 
-$('#btnNext').click(async function(e) {
+$('#btnNext').click(async function (e) {
     $('#card').removeClass("scale-in").addClass("scale-out")
     await new Promise(resolve => setTimeout(resolve, 300));
     $("#titleHidden").trigger("click");
@@ -39,7 +39,7 @@ function NextCard() {
 }
 
 async function LoadContent(lesson) {
-    const response = await fetch(`http://localhost:8000/data/${lesson}.md`);
+    const response = await fetch(`/data/${lesson}.md`);
     const txt = await response.text();
     var tree = markdown.parse(txt);
     return tree[2].slice(1);
