@@ -3,165 +3,67 @@
 <html lang="en">
 
 <head>
+    <title>Flight Deck 1.3</title>
     <meta charset="utf-8">
-
-    <title>Flight Deck 1.2</title>
     <meta name="description" content="The Kryptonbyte Flight Deck">
     <meta name="author" content="Christian Lohr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#3367D6">
+    <meta name="theme-color" content="#222831">
+
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/spinner.css">
 
     <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
-    <nav>
-        <div class="blue nav-wrapper">
-            <a href="/" class="brand-logo"><i class="material-icons">local_airport</i>Flight Deck</a>
-        </div>
-    </nav>
-    <div class="container" id="menu">
-        <div class="section">
-            <div class="row">
-                <div class="col s12">
-                    <div class="collection">
-                        <a href="#!" data-lesson="10" class="blue-text lesson-button collection-item">10 - Luftrecht</a>
-                        <a href="#!" data-lesson="20" class="blue-text lesson-button collection-item">20 - Allgemeine
-                            atfahrzeugkenntnis</a>
-                        <a href="#!" data-lesson="30" class="blue-text lesson-button collection-item">30 - Flugleistuna
-                            und
-                            Flugplanung</a>
-                        <a href="#!" data-lesson="40" class="blue-text lesson-button collection-item">40 -
-                            Menschlicheaeistungsvermögen</a>
-                        <a href="#!" data-lesson="50" class="blue-text lesson-button collection-item">50 -
-                            Meteorologiadiv </a>
-                        <a href="#!" data-lesson="60" class="blue-text lesson-button collection-item">60 -
-                            Navigation</a>
-                        <a href="#!" data-lesson="70" class="blue-text lesson-button collection-item">70 -
-                            Betriebsveraren</a>
-                        <a href="#!" data-lesson="80" class="blue-text lesson-button collection-item">80 - Grundlagen
-                            des
-                            Fluges</a>
-                        <a href="#!" data-lesson="90" class="blue-text lesson-button collection-item">90 - Kommunikation
-                            VFR</a>
-                    </div>
+    <div class="container">
+        <header>
+            <div class="brand-icon"><i class="fas fa-plane"></i></div>
+            <span>Flightdeck</span>
+        </header>
+        <div class="main">
+            <div class="menu">
+                <div data-lesson="10" class="item">Luftrecht</div>
+                <div data-lesson="20" class="item">Allgemeine Luftfahrzeugkenntnis</div>
+                <div data-lesson="30" class="item">Flugleistug und Flugplanung</div>
+                <div data-lesson="40" class="item">Menschliches Leistungsvermögen</div>
+                <div data-lesson="50" class="item">Meteorologie</div>
+                <div data-lesson="60" class="item">Navigation</div>
+                <div data-lesson="70" class="item">Betriebsverfahren</div>
+                <div data-lesson="80" class="item">Grundlagen des Fluges</div>
+                <div data-lesson="90" class="item">Kommunikation VFR</div>
+            </div>
+            <div class="loader" style="display: none;">
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container" id="quiz" hidden>
-        <div class="row"></div>
-        <div class="row">
-            <div class="col s12 center">
-                <div id="card" class="card scale-transition" style="height: 100%;">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img alt="card" class="activator" src="card.jpeg">
-                    </div>
-                    <div class="card-content">
-                        <span id="title" class="card-title activator grey-text text-darken-4">Card Title<i
-                                class="material-icons right">more_vert</i></span>
-                    </div>
-                    <div class="card-reveal">
-                        <div class="container">
-                            <div class="section">
-                                <div class="row">
-                                    <div class="col s12">
-                                        <span id="titleHidden" class="card-title flow-text grey-text text-darken-4">Card
-                                            Title<i class="material-icons right">close</i></span>
-                                        <div class="divider"></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col s12">
-                                        <div id="solution" class="left-align flow-text">Here is some more information
-                                            about this product that is only revealed once clicked on.</div>
-                                    </div>
-                                </div>
-                                <div class="row"></div>
-                                <div class="row">
-                                    <div class="col s12">
-                                        <a id="btnNext" class="waves-effect waves-light right-align btn-large"><i
-                                                class="material-icons right">check</i>Next</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="loader" hidden>
-        <div class="section">
-            <div class="row">
-                <div class="col s12 center">
-                    <h4>Loading ...</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 center">
-                    <div class="preloader-wrapper big active">
-                        <div class="spinner-layer spinner-blue">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="spinner-layer spinner-red">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="spinner-layer spinner-yellow">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-
-                        <div class="spinner-layer spinner-green">
-                            <div class="circle-clipper left">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="gap-patch">
-                                <div class="circle"></div>
-                            </div>
-                            <div class="circle-clipper right">
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="quiz" style="display: none;">
+                <div class="card">
+                    <h2 id="title">Question</h2>
+                    <p class="blurry" id="solution">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                        nonumy eirmod
+                        tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                        ipsum dolor sit amet.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="markdown.js"></script>
-    <script src="main.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/markdown.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

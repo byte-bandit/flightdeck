@@ -2,8 +2,7 @@
     "short_name": "Flightdeck",
     "name": "Flightdeck: PPL-A notes and questions",
     "description": "PPL-A notes and questions to help training.",
-    "icons": [
-        {
+    "icons": [{
             "src": "/images/Icon-192.png",
             "type": "image/png",
             "sizes": "192x192",
@@ -17,8 +16,8 @@
         }
     ],
     "start_url": "/",
-    "background_color": "#3367D6",
+    "background_color": "#222831",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6"
+    "theme_color": "#222831"
 }

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    margin: 0px;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+header {
+    color: #eeeeee;
+    background: #00adb5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    place-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.main {
+    color: #eeeeee;
+    background: #393e46;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    place-items: center;
+}
+
+.brand-icon {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.menu {
+    animation-duration: 1s;
+    display: grid;
+    place-items: stretch;
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu .item {
+    color: #eeeeee;
+    margin: .25rem .5rem;
+    text-align: center;
+    padding: .5rem;
+    background-color: #222831;
+}
+
+.loader {
+    animation-duration: 1s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+
+.card {
+    animation-duration: .5s;
+    display: grid;
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    place-items: stretch;
+    font-family: 'Raleway', sans-serif;
+    background-color: #222831;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.blurry {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
