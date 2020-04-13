@@ -1,6 +1,8 @@
 gItems = [];
 gCurrentItem = null;
-state = 0;
+gTotal = 0;
+gShown = 0;
+gState = 0;
 
 $('.menu .item').click(async function (e) {
     e.preventDefault();
@@ -25,25 +27,33 @@ $('.menu .item').click(async function (e) {
                 });
             $('.quiz').show();
             $('.card').addClass('animated bounceInLeft');
+            $('.progress').show();
+            $('progress').addClass('animated slideInDown');
+            gTotal = gItems.length;
             NextCard();
-            state = 1;
+            gState = 1;
         });
 
     return false;
 });
 
+function updateProgress() {
+    value = gShown / gTotal;
+    $('progress').val(value)
+}
+
 $('.card').click(() => {
-    if (state === 1) {
+    if (gState === 1) {
         $('#solution').removeClass('blurry');
-        state = 2;
+        gState = 2;
         return;
     }
 
-    if (state === 2) {
+    if (gState === 2) {
         $('.card')
             .addClass('animated bounceOutRight')
             .bind('animationend', (e) => {
-                state = 1;
+                gState = 1;
                 $('#solution').addClass('blurry');
                 NextCard();
                 $('.card')
@@ -56,8 +66,10 @@ $('.card').click(() => {
 })
 
 function NextCard() {
+    updateProgress();
     if (gItems.length > 0) {
         gCurrentItem = gItems.pop()
+        gShown++;
         try {
             $('#title').html(gCurrentItem[1]);
             $('#solution').html(markdown.toHTML(gCurrentItem[2]));

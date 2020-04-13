@@ -7,15 +7,12 @@ body {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-rows: 3rem 1fr;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 3rem auto 1fr;
 }
 
 header {
     color: #eeeeee;
     background: #00adb5;
-    grid-column-start: 1;
-    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
     display: grid;
@@ -26,10 +23,8 @@ header {
 .main {
     color: #eeeeee;
     background: #393e46;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     display: grid;
     place-items: center;
 }
@@ -84,4 +79,31 @@ header {
 .blurry {
     color: transparent;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+progress {
+    width: 100%;
+    height: .5rem;
+    display: block;
+    /* Important Thing */
+    -webkit-appearance: none;
+    border: none;
+}
+
+.progress {
+    background: #393e46;
+    padding: 0px;
+    margin: 0px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+    background: #222831;
+}
+
+progress::-webkit-progress-value {
+    background: #00adb5;
+    transition: width 0.5s;
 }
